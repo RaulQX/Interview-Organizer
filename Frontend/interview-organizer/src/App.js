@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
-import { Box, createTheme } from '@mui/material'
+import { createTheme } from '@mui/material'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
@@ -41,18 +41,5 @@ const theme = createTheme({
 	},
 	shape: {
 		borderRadius: 4,
-	},
-	overrides: {
-		MuiAppBar: {
-			colorInherit: {
-				backgroundColor: '#25082f',
-				color: '#fff',
-			},
-		},
-	},
-	props: {
-		MuiAppBar: {
-			color: 'inherit',
-		},
 	},
 })
