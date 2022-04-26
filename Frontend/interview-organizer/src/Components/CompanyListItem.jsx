@@ -89,15 +89,15 @@ const CompanyListItem = ({
 					</Button>
 					<Button
 						disabled={
-							currentPage ===
-							Math.floor(companyList.length / 5) + 1
+							currentPage !==
+							Math.ceil(companyList.length / 5) - 1
 						}
 						onClick={() => setCurrentPage(currentPage + 1)}
 					>
 						<ArrowForwardIosIcon
 							color={
-								currentPage ===
-								Math.floor(companyList.length / 5) + 1
+								currentPage !==
+								Math.ceil(companyList.length / 5) - 1
 									? 'primary'
 									: 'secondary'
 							}
