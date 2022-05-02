@@ -9,7 +9,7 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { Avatar, Box } from '@mui/material'
 
-const Login = () => {
+const SignUp = () => {
 	return (
 		<Container component="main" maxWidth={'xs'}>
 			<Box
@@ -31,9 +31,24 @@ const Login = () => {
 					mb="1rem"
 				>
 					{' '}
-					Log In!
+					Sign Up!
 				</Typography>
 				<Grid container spacing={2} padding="1rem" mb="2rem">
+					<Grid item xs={12}>
+						<TextField
+							name="username"
+							required
+							fullWidth
+							id="userName"
+							label="Username"
+							sx={{
+								background: '#692992',
+								borderRadius: '5px',
+								input: { color: '#fff' },
+								label: { color: '#fff' },
+							}}
+						/>
+					</Grid>
 					<Grid item xs={12}>
 						<TextField
 							required
@@ -73,12 +88,12 @@ const Login = () => {
 							variant="contained"
 							sx={{ mb: 2 }}
 						>
-							Login
+							Sign Up
 						</Button>
 					</Grid>
 					<Grid item xs={9}>
-						<Link href="SignUp" variant="body2">
-							Don't have an account? Sign Up!
+						<Link href="login" variant="body2">
+							Already have an account? Sign in
 						</Link>
 					</Grid>
 				</Grid>
@@ -87,4 +102,4 @@ const Login = () => {
 	)
 }
 
-export default Login
+export default SignUp

@@ -3,9 +3,10 @@ import { createTheme } from '@mui/material'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
-import Login from './Pages/Login'
+import SignUp from './Pages/SignUp'
 import Profile from './Pages/Profile'
 import Register from './Pages/Register'
+import Login from './Pages/Login'
 
 const App = () => {
 	return (
@@ -15,7 +16,8 @@ const App = () => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="profile" element={<Profile />} />
-					<Route path="login" element={<Login />} />
+					<Route path="SignUp" element={<SignUp />} />
+					<Route path="Login" element={<Login />} />
 					<Route path="Register" element={<Register />} />
 				</Routes>
 			</BrowserRouter>
